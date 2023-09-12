@@ -1,0 +1,12 @@
+.forms{
+    background-color: rgba(233, 150, 122, 0.433);
+    margin-left: 150px;
+    margin-right: 150px;
+}
+#costumer_page{
+    visibility: hidden;
+}
+#shopping{
+    visibility: hidden;
+    
+}

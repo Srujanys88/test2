@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center> <h1>Welcome to shopping </h1></center>
+    <form class="forms">
+        <label > USER NAME : <input type="text" id="name"></label> <br> <br>
+        <label> PASSWORDE : <input id="password" type="password"></label> <br> <br>
+        <center>  <button type="button" onclick="check_admin()">login</button></center>
+    </form>
+
+
+    <form action="" id="costumer_page">
+        <center><h1>Welcome admin</h1></center>
+        <div class="forms">
+            <label > COSTUMER NAME : <input type="text" id="cname"></label> <br> <br>
+            <label> COSUMER PHONE : <input id="cphone" type="text" onfocusout="phone()" ></label> <br> <br>
+            <center>  <button type="button" onclick="shop()">add item</button></center>
+        </div>
+    </form>
+
+
+    <br> <br> <br>
+    <form action="" id="shopping">
+        <div class="forms">
+            <label > item name  : <input type="text" id="item_name"></label>
+            <label> item cost  : <input id="item_cost" type="text" onclick="phone()" ></label>
+        </div>
+    </form>
+
+
+    <script>
+        function check_admin(){
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            if(name=="admin" && password == "admin"){
+                document.getElementById("costumer_page").style.visibility = "visible";
+            }
+            else{
+                alert("Enter the correct name and password");
+            }
+        }
+    </script>
+    <script>
+        function phone() {
+        var phonenum = document.getElementById("cphone").value;
+        if (phonenum.match(/[0-9]{10}/)) {
+            return true;
+        } 
+        else {
+          alert("please enter valid phone number");
+          return false;
+        }
+      }  
+    </script>
+    <script>
+        function shop(){
+            document.getElementById("shopping").style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>
